@@ -143,7 +143,7 @@ public:
 };
 
 int main() {
-    cout << "=== Graph Cycle Detection Program ===" << endl << endl;
+    cout << "=== Cuyugan Andrelee - Graph Cycle Detection Program ===" << endl << endl;
     
     // Test case 1: Cyclic graph
     cout << "Test Case 1: Cyclic Graph" << endl;

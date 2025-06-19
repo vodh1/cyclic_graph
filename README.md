@@ -1,4 +1,4 @@
-# Graph Cycle Detection Program
+# Cuyugan Andrelee - Graph Cycle Detection Program
 
 This C++ program determines if a given graph (represented as a 2D adjacency matrix) is cyclic or not, and displays the vertices in the cycle if one exists.
 
@@ -47,17 +47,14 @@ make clean
 ### Manual Compilation
 ```bash
 # Compile with g++
-g++ -std=c++11 -Wall -Wextra -O2 -o cyclic_graph cyclic_graph.cpp
+g++ -std=c++11 -Wall -Wextra -O2 -o cuyugan_andrelee_cyclic cuyugan_andrelee_cyclic.cpp
 
 # Run the program
-./cyclic_graph
+./cuyugan_andrelee_cyclic
 ```
 
 ## Test Cases Included
 
-<<<<<<< HEAD
-1. **Cyclic Graph:** A 5-vertex graph with a cycle 
-=======
 ### Test Case 1: Simple Cyclic Graph
 - **5-vertex graph** with a single cycle
 - **Structure**: 0→1→2→3→4→0
@@ -77,7 +74,6 @@ g++ -std=c++11 -Wall -Wextra -O2 -o cyclic_graph cyclic_graph.cpp
 - **5-vertex directed acyclic graph**
 - **Structure**: Tree-like structure with no cycles
 - **Purpose**: Demonstrates correct identification of acyclic graphs
->>>>>>> b8561e2 (Add multiple test cases for cycle detection in graphs)
 
 ## Output Format
 
@@ -90,7 +86,7 @@ For each test case, the program displays:
 ## Example Output
 
 ```
-=== Graph Cycle Detection Program ===
+=== Cuyugan Andrelee - Graph Cycle Detection Program ===
 
 Test Case 1: Cyclic Graph
 Adjacency Matrix:
@@ -169,11 +165,8 @@ The program uses a 2D adjacency matrix where:
 ## Notes
 
 - The program handles directed graphs
+- Self-loops are considered cycles
 - Both implementations are deterministic and will find the same cycles
-<<<<<<< HEAD
-- The cycle path may vary slightly between DFS and BFS due to different traversal orders 
-=======
 - The cycle path may vary slightly between DFS and BFS due to different traversal orders
 - The program correctly identifies both cyclic and acyclic graphs
-- Multiple test cases demonstrate the robustness of both algorithms 
->>>>>>> b8561e2 (Add multiple test cases for cycle detection in graphs)
+- Multiple test cases demonstrate the robustness of both algorithms

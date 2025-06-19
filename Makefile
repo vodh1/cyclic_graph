@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall -Wextra -O2
-TARGET = cyclic_graph
-SOURCE = cyclic_graph.cpp
+TARGET = cuyugan_andrelee_cyclic
+SOURCE = cuyugan_andrelee_cyclic.cpp
 
 all: $(TARGET)
 
