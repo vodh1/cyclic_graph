@@ -188,5 +188,128 @@ int main() {
     }
     cout << endl;
     
+    // Test case 2: Cyclic graph with multiple cycles
+    cout << "Test Case 2: Cyclic Graph with Multiple Cycles" << endl;
+    vector<vector<int>> cyclicMatrix2 = {
+        {0, 1, 1, 0, 0, 0},
+        {0, 0, 0, 1, 0, 0},
+        {0, 0, 0, 0, 1, 0},
+        {0, 0, 0, 0, 0, 1},
+        {0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0}
+    };
+    
+    Graph cyclicGraph2(cyclicMatrix2);
+    cyclicGraph2.printMatrix();
+    
+    // DFS approach
+    cout << "Using DFS:" << endl;
+    if (cyclicGraph2.hasCycleDFS(cycleVertices)) {
+        cout << "Cycle detected!" << endl;
+        cout << "Cycle vertices: ";
+        for (int vertex : cycleVertices) {
+            cout << vertex << " ";
+        }
+        cout << endl;
+    } else {
+        cout << "No cycle detected." << endl;
+    }
+    cout << endl;
+    
+    // BFS approach
+    cout << "Using BFS:" << endl;
+    if (cyclicGraph2.hasCycleBFS(cycleVertices)) {
+        cout << "Cycle detected!" << endl;
+        cout << "Cycle vertices: ";
+        for (int vertex : cycleVertices) {
+            cout << vertex << " ";
+        }
+        cout << endl;
+    } else {
+        cout << "No cycle detected." << endl;
+    }
+    cout << endl;
+    
+    // Test case 3: Cyclic graph with self-loop
+    cout << "Test Case 3: Cyclic Graph with Self-loop" << endl;
+    vector<vector<int>> cyclicMatrix3 = {
+        {1, 1, 0, 0},
+        {0, 0, 1, 0},
+        {0, 0, 0, 1},
+        {1, 0, 0, 0}
+    };
+    
+    Graph cyclicGraph3(cyclicMatrix3);
+    cyclicGraph3.printMatrix();
+    
+    // DFS approach
+    cout << "Using DFS:" << endl;
+    if (cyclicGraph3.hasCycleDFS(cycleVertices)) {
+        cout << "Cycle detected!" << endl;
+        cout << "Cycle vertices: ";
+        for (int vertex : cycleVertices) {
+            cout << vertex << " ";
+        }
+        cout << endl;
+    } else {
+        cout << "No cycle detected." << endl;
+    }
+    cout << endl;
+    
+    // BFS approach
+    cout << "Using BFS:" << endl;
+    if (cyclicGraph3.hasCycleBFS(cycleVertices)) {
+        cout << "Cycle detected!" << endl;
+        cout << "Cycle vertices: ";
+        for (int vertex : cycleVertices) {
+            cout << vertex << " ";
+        }
+        cout << endl;
+    } else {
+        cout << "No cycle detected." << endl;
+    }
+    cout << endl;
+    
+    // Test case 4: Acyclic graph (no cycles)
+    cout << "Test Case 4: Acyclic Graph (No Cycles)" << endl;
+    vector<vector<int>> acyclicMatrix = {
+        {0, 1, 1, 0, 0},
+        {0, 0, 0, 1, 1},
+        {0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0}
+    };
+    
+    Graph acyclicGraph(acyclicMatrix);
+    acyclicGraph.printMatrix();
+    
+    // DFS approach
+    cout << "Using DFS:" << endl;
+    if (acyclicGraph.hasCycleDFS(cycleVertices)) {
+        cout << "Cycle detected!" << endl;
+        cout << "Cycle vertices: ";
+        for (int vertex : cycleVertices) {
+            cout << vertex << " ";
+        }
+        cout << endl;
+    } else {
+        cout << "No cycle detected." << endl;
+    }
+    cout << endl;
+    
+    // BFS approach
+    cout << "Using BFS:" << endl;
+    if (acyclicGraph.hasCycleBFS(cycleVertices)) {
+        cout << "Cycle detected!" << endl;
+        cout << "Cycle vertices: ";
+        for (int vertex : cycleVertices) {
+            cout << vertex << " ";
+        }
+        cout << endl;
+    } else {
+        cout << "No cycle detected." << endl;
+    }
+    cout << endl;
+    
     return 0;
 } 

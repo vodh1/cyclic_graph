@@ -55,7 +55,29 @@ g++ -std=c++11 -Wall -Wextra -O2 -o cyclic_graph cyclic_graph.cpp
 
 ## Test Cases Included
 
+<<<<<<< HEAD
 1. **Cyclic Graph:** A 5-vertex graph with a cycle 
+=======
+### Test Case 1: Simple Cyclic Graph
+- **5-vertex graph** with a single cycle
+- **Structure**: 0→1→2→3→4→0
+- **Purpose**: Basic cycle detection demonstration
+
+### Test Case 2: Cyclic Graph with Multiple Cycles
+- **6-vertex graph** with multiple possible cycles
+- **Structure**: Contains edges that can form different cycles (0→1→3→5→0 and 0→2→4→5→0)
+- **Purpose**: Tests algorithm's ability to detect cycles when multiple cycles exist
+
+### Test Case 3: Cyclic Graph with Self-loop
+- **4-vertex graph** with a self-loop at vertex 0
+- **Structure**: Contains both a self-loop (0→0) and a larger cycle (0→1→2→3→0)
+- **Purpose**: Tests algorithm's ability to handle self-loops and larger cycles simultaneously
+
+### Test Case 4: Acyclic Graph (No Cycles)
+- **5-vertex directed acyclic graph**
+- **Structure**: Tree-like structure with no cycles
+- **Purpose**: Demonstrates correct identification of acyclic graphs
+>>>>>>> b8561e2 (Add multiple test cases for cycle detection in graphs)
 
 ## Output Format
 
@@ -80,11 +102,57 @@ Adjacency Matrix:
 
 Using DFS:
 Cycle detected!
-Cycle vertices: 0 1 2 3 4 0
+Cycle vertices: 4 0 1 2 3 4
 
 Using BFS:
 Cycle detected!
-Cycle vertices: 0 1 2 3 4 0
+Cycle vertices: 4 0 1 2 3 4
+
+Test Case 2: Cyclic Graph with Multiple Cycles
+Adjacency Matrix:
+0 1 1 0 0 0 
+0 0 0 1 0 0 
+0 0 0 0 1 0 
+0 0 0 0 0 1 
+0 0 0 0 0 1 
+1 0 0 0 0 0 
+
+Using DFS:
+Cycle detected!
+Cycle vertices: 5 0 1 3 5
+
+Using BFS:
+Cycle detected!
+Cycle vertices: 5 0 1 3 5
+
+Test Case 3: Cyclic Graph with Self-loop
+Adjacency Matrix:
+1 1 0 0 
+0 0 1 0 
+0 0 0 1 
+1 0 0 0 
+
+Using DFS:
+Cycle detected!
+Cycle vertices: 0 0
+
+Using BFS:
+Cycle detected!
+Cycle vertices: 0 0
+
+Test Case 4: Acyclic Graph (No Cycles)
+Adjacency Matrix:
+0 1 1 0 0 
+0 0 0 1 1 
+0 0 0 0 0 
+0 0 0 0 0 
+0 0 0 0 0 
+
+Using DFS:
+No cycle detected.
+
+Using BFS:
+No cycle detected.
 ```
 
 ## Graph Representation
@@ -102,4 +170,10 @@ The program uses a 2D adjacency matrix where:
 
 - The program handles directed graphs
 - Both implementations are deterministic and will find the same cycles
+<<<<<<< HEAD
 - The cycle path may vary slightly between DFS and BFS due to different traversal orders 
+=======
+- The cycle path may vary slightly between DFS and BFS due to different traversal orders
+- The program correctly identifies both cyclic and acyclic graphs
+- Multiple test cases demonstrate the robustness of both algorithms 
+>>>>>>> b8561e2 (Add multiple test cases for cycle detection in graphs)
