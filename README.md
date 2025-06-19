@@ -55,9 +55,7 @@ g++ -std=c++11 -Wall -Wextra -O2 -o cyclic_graph cyclic_graph.cpp
 
 ## Test Cases Included
 
-1. **Cyclic Graph:** A 5-vertex graph with a cycle (0→1→2→3→4→0)
-2. **Acyclic Graph:** A 5-vertex directed acyclic graph
-3. **Self-loop Graph:** A 3-vertex graph with a self-loop at vertex 0
+1. **Cyclic Graph:** A 5-vertex graph with a cycle 
 
 ## Output Format
 
@@ -103,6 +101,5 @@ The program uses a 2D adjacency matrix where:
 ## Notes
 
 - The program handles directed graphs
-- Self-loops are considered cycles
 - Both implementations are deterministic and will find the same cycles
 - The cycle path may vary slightly between DFS and BFS due to different traversal orders 
